@@ -1,0 +1,23 @@
+extends main
+
+block content
+    small(style='margin-bottom: 20px; display: block')
+        a(href="/dishes")
+            i.fa.fa-fw.fa-lg.fa-arrow-left
+            | Dish Menu
+
+    h4.display-4.page-heading Update 
+        span.page-heading-dyn=dish.name
+
+    .row
+        form.form.col-md-6#form-dish-update(action='#', method='POST', _id=dish._id)
+            .form-group
+                input.form-control(value=dish.name, type='text', autofocus, placeholder='Enter dish name', name='in-dish-name')/
+            .form-group
+                input.form-control(value=dish.description, type='text', autofocus, placeholder='Enter dish description', name='in-dish-description')/
+            .form-group
+                input.form-control(value=dish.price, type='text', autofocus, placeholder='Enter price', name='in-dish-price')/
+            div
+                button.btn.btn-default.btn-update-dish.pull-right(type='submit')
+                    i.fa.fa-fw.fa-pencil &emsp;
+                    | Update Dish

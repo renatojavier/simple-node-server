@@ -1,0 +1,53 @@
+body{
+    background-color: #f2f2f2;
+}
+
+.page-heading{
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/**
+ * Root container div
+ */
+body > .container{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+body > .container > .row{
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/**
+ * Request menu button
+ */
+#request-new-menu{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/**
+ * Add Dish Page
+ */
+
+
+/**
+ * Update Dish Page
+ */
+.page-update .page-heading{
+    font-size: 2rem;
+}
+
+/**
+ * Utility classes
+ */
+.disable-touch{
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-pointer-events: none;
+    pointer-events: none;
+}

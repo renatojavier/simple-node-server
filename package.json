@@ -1,0 +1,27 @@
+{
+  "name": "simple-node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Renato Javier",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "chai": "^4.1.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.8",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.2",
+    "requirejs": "^2.3.4",
+    "toastr": "^2.1.2"
+  }
+}

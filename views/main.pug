@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title=title
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0')
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css")
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css")
+        link(rel="stylesheet", href="/stylesheet/main.css")
+    body
+        .container(class='page-'+_class)
+            .row
+                .col-md-12
+                    block content
+        
+        script(data-main='/javascript/main', src='/javascript/require.js')

@@ -1,0 +1,20 @@
+extends main
+
+block content
+    small(style='margin-bottom: 20px; display: block')
+        a(href="/dishes")
+            i.fa.fa-fw.fa-lg.fa-arrow-left
+            | Dish Menu
+    h4.display-4.page-heading Create New Dish
+    .row
+        form.form.col-md-6#form-dish-add(action='#' method='POST')
+            .form-group
+                input.form-control(value='', type='text', autofocus, placeholder='Enter dish name', name='in-dish-name')/
+            .form-group
+                input.form-control(value='Test description', type='text', autofocus, placeholder='Enter dish description', name='in-dish-description')/
+            .form-group
+                input.form-control(value='40', type='text', autofocus, placeholder='Enter price', name='in-dish-price')/
+            div
+                button.btn.btn-primary.btn-add-dish.pull-right(type='submit')
+                    i.fa.fa-fw.fa-plus
+                    | Create Dish

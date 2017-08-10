@@ -1,0 +1,34 @@
+extends main
+
+block content
+    small(style='margin-bottom: 20px; display: block')
+        a(href="/")
+            i.fa.fa-fw.fa-lg.fa-arrow-left
+            | Home
+
+    h4.display-4.page-heading Dishes Menu
+
+    button.btn.btn-warning#request-new-menu(onclick='location.href="/dishes/add/";') Create new dish
+    
+    - var root = '/dishes/s/'
+    table.table.table-hover.table-dishes
+        thead
+            th ID
+            th Name
+            th Description
+            th Price ($)
+            th Actions
+        tbody
+            each dish, index in dishes
+                tr(id=dish._id).dishes
+                    td
+                        a(href=root+dish._id)= index+1
+                    td
+                        a(href=href=root+dish._id)= dish.name
+                    td= dish.description
+                    td= dish.price
+                    td
+                        a(href=root+dish._id, data-target=dish._id, style='margin-right: 3px;').btn.btn-info.btn-sm#btn-dish-update
+                            i.fa.fa-fw.fa-pencil
+                        a(href="#", data-target=dish._id).btn.btn-danger.btn-sm#btn-dish-delete
+                            i.fa.fa-fw.fa-remove
